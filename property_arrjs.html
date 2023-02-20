@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Properties of Array in JS </title>   
+</head>
+<body>
+    <h1>Array Properties</h1>
+    <h3>  i] Concat() - The concat() method concatenates (joins) two or more arrays.</h3>
+    
+    <script>
+        arr1 = ["JD", "Leo"];
+        arr2 = ["Emil", "Tobias", "Linus"];
+        arr3 = [1, 2, 3];
+
+        children = arr1.concat(arr2, arr3); //concatenation
+        document.write(children);
+    </script>
+
+    <h3> ii] Join() - The join() method returns an array as a string.</h3>
+    <script>
+        text = arr1.join(" and "); //join
+        document.write(text);
+    </script>
+
+    <h3> iii] Splice() - The splice() method adds and/or removes array elements.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        arr2.splice(2, 0, "jim", "john");
+        document.write(arr2);
+    </script>
+
+    <h3> iv] Fill() - The fill() method fills specified elements in an array with a value.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        arr2.fill("john");
+        document.write(arr2);
+    </script>
+
+    <h3> v] indexof() - The indexOf() method returns the first index (position) of a specified value.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        index = arr2.indexOf("Linus");
+        document.write(index);
+    </script>
+
+    <h3> vi] isArray() - The isArray() method returns true if an object is an array, otherwise false.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        result =  Array.isArray(arr2);
+        document.write(result);
+    </script>
+
+    <h3> vii] lastIndexOf() - The lastIndexOf() method returns the last index (position) of a specified value.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus", "Emil"];
+        result =  arr2.lastIndexOf("Emil");
+        document.write(result);
+    </script>
+
+    <h3> viii] copyWithin()</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        result =  arr2.copyWithin(2,0);
+        document.write(result);
+    </script>
+
+    <h3> ix] length() - The length property sets or returns the number of elements in an array.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        result = arr2.length;
+        document.write(result);
+    </script>
+
+    <h3> x] reverse() - The reverse() method reverses the order of the elements in an array.</h3>
+    <script>
+        arr2 = ["Emil", "Tobias", "Linus"];
+        result = arr2.reverse();
+        document.write(result);
+    </script>  
+
+    <h3> xi] sort() - The sort() sorts the elements of an array.</h3>
+    <script>
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        result = fruits.sort();
+        document.write(result);
+    </script>
+    
+    <h3> xii] map() - map() creates a new array from calling a function for every array element.</h3>
+    <script>
+        numbers = [25, 36, 49, 64, 81];
+        result = numbers.map(myFunction);
+        document.write(result);
+        function myFunction(num) {
+            return num * 10;
+        }
+    </script>
+
+    <h3> xiii] map()</h3>
+    <script>
+        numbers = [25, 36, 49, 64, 81];
+        result = numbers.map(Math.sqrt);
+        document.write(result);
+    </script>
+</body>
+</html>
