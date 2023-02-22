@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 	
+  <title>Regular Expressions in JavaScript</title> 	
+  <style> 		table, th, td { 		 border: 1px solid black; 		 border-collapse: collapse; 		} 		th, td { 		 padding: 10px; 		} 	
+  </style> 
+  </head> 
+  <body> 	<h1>Regular Expressions in JavaScript</h1> 
+  	<h2>Regular Expression Object</h2> 	<table> 		
+  	    <tr> 		
+  	        	<th>Property/Method</th> 			<th>Description</th> 		
+  	        	</tr> 	
+  	   	<tr> 			
+  	        	    <td>source</td> 			<td>Returns the text of the regular expression pattern</td> 		
+  	        	    </tr> 		
+  	   <tr> 			<td>flags</td> 			<td>Returns a string of all the flags used in the regular expression</td> 		
+  	   </tr> 	
+  	   	<tr> 			<td>test()</td> 			
+  	   	<td>Tests for a match in a string. Returns true or false.</td> 		
+  	   	</tr> 		
+  	   	<tr> 			<td>exec()</td> 			<td>Searches for a match in a string. Returns an array of information or null if no match is found.</td> 		</tr> 
+  	   		</table>
+  	   		<h2>Modifiers</h2>
+<table>
+	<tr>
+		<th>Modifier</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>i</td>
+		<td>Case-insensitive matching</td>
+	</tr>
+	<tr>
+		<td>g</td>
+		<td>Global matching (finds all matches rather than stopping after the first match)</td>
+	</tr>
+	<tr>
+		<td>m</td>
+		<td>Multi-line matching</td>
+	</tr>
+</table>
+
+<h2>Brackets</h2>
+<table>
+	<tr>
+		<th>Expression</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>[abc]</td>
+		<td>Matches any of the characters a, b, or c</td>
+	</tr>
+	<tr>
+		<td>[^abc]</td>
+		<td>Matches any character except a, b, or c</td>
+	</tr>
+	<tr>
+		<td>[0-9]</td>
+		<td>Matches any digit between 0 and 9</td>
+	</tr>
+	<tr>
+		<td>[^0-9]</td>
+		<td>Matches any non-digit character</td>
+	</tr>
+	<tr>
+		<td>[A-Z]</td>
+		<td>Matches any uppercase letter</td>
+	</tr>
+	<tr>
+		<td>[a-z]</td>
+		<td>Matches any lowercase letter</td>
+	</tr>
+</table>
+
+<h2>Metacharacters</h2>
+<table>
+	<tr>
+		<th>Metacharacter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>.</td>
+		<td>Matches any single character except for newline or line terminator</td>
+	</tr>
+	<tr>
+		<td>\w</td>
+		<td>Matches any alphanumeric character (including underscore)</td>
+	</tr>
+	<tr>
+		<td>\W</td>
+		<td>Matches any non-alphanumeric character (excluding underscore)</td> 
+		</tr> 
+		<tr> <td>\d</td> <td>Matches any digit character</td> </tr>
+		 <tr> <td>\D</td> <td>Matches any non-digit character</td> </tr> 
+		 <tr> <td>\s</td> <td>Matches any whitespace character</td> </tr>
+		  <tr> <td>\S</td> <td>Matches any non-whitespace character</td> </tr> 
+		  <tr> <td>\b</td> <td>Matches a word boundary (position between a word character and a non-word character)</td> </tr> 
+		  <tr> <td>\B</td> <td>Matches a non-word boundary (position between two word characters or two non-word characters)</td> </tr> 
+		<tr> <td>\0</td> <td>Find a NULL character</td></tr>
+	<tr> <td>\n</td><td>	Find a new line character</td></tr>
+	<tr> <td>\f</td>	<td>Find a form feed character</td></tr>
+	<tr> <td>\r</td><td>Find a carriage return character</td></tr>
+	<tr> <td>\t</td><td>Find a tab character</td></tr>
+	<tr> <td>\v</td><td>Find a vertical tab character</td></tr>
+		  
+		  </table>
+		  <h2>Quantifiers</h2>
+<table>
+	<tr>
+		<th>Quantifier</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td>Matches zero or more occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>+</td>
+		<td>Matches one or more occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>?</td>
+		<td>Matches zero or one occurrence of the preceding element</td>
+	</tr>
+	<tr>
+		<td>{n}</td>
+		<td>Matches exactly n occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>{n,}</td>
+		<td>Matches at least n occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>{n,m}</td>
+		<td>Matches at least n and at most m occurrences of the preceding element</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	</tr>
+
+	
+</table>
+
+<h2>RegExp Methods</h2>
+<table>
+	<tr>
+		<th>Method</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>test()</td>
+		<td>Tests for
+a match in a string. Returns true or false.</td> </tr> 
+
+<tr> <td>exec()</td> <td>Searches for a match in a string. Returns an array of information about the match or null if no match was found.</td> </tr> 
+
+<tr> <td>match()</td> <td>Searches for a match in a string. Returns an array of information about the match or null if no match was found.</td> </tr> 
+<tr> <td>replace()</td> <td>Replaces a substring in a string with a new substring.</td> </tr> 
+<tr> <td>search()</td> <td>Searches for a match in a string. Returns the index of the match or -1 if no match was found.</td>
+ </tr> </table>
+
+
+
+<h2>Conclusion</h2> <p>Regular expressions are a powerful tool for working with text data. They allow you to search for patterns in strings and perform complex text processing tasks with ease. By understanding the components of a regular expression, including the object, modifiers, brackets, metacharacters, quantifiers, and methods, you can become a more efficient and effective programmer. </p> 
+<a href="index1.html">JS Form Validation</a>
+
+
+</body> </html>
