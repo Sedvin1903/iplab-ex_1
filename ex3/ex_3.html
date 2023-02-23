@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>IPL_3</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+		}
+
+		form {
+			background-color: #fff;
+			padding: 20px;
+			max-width: 500px;
+			margin: 50px auto;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			border-radius: 10px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.error-message {
+			color: red;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form >
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+
+		<label for="first-name">First name:</label>
+		<input type="text" id="first-name" name="first-name" required>
+
+		<label for="last-name">Last name:</label>
+		<input type="text" id="last-name" name="last-name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" required>
+		
+		<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday" required>
+
+		<label for="age">Age:</label>
+<input type="number" id="age" name="age"
+pattern="[1-9]{1}[0-9]{1}" required>
+
+		<label for="door">Door No:</label>
+		<input type="text" id="door" name="door" required>
+		
+		<label for="street">Street:</label>
+		<input type="text" id="street" name="street" required>
+		
+	<label for="address">Address:</label>
+		<input type="text" id="address" name="address" required>
+
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city" required>
+
+		<label for="state">State:</label>
+		<select id="state" name="state" required>
+			<option value="">--Select a state--</option>
+			<option value="PY">Pondicherry</option>
+				<option value="TN">TamilNadu</option>
+		</select>
+
+		<label for="zip">Zip code:</label>
+		<input type="text" id="zip" name="zip" pattern="[0-9]{6}" required>
+		
+				<label for="remember-me">Remember me:</label>
+		<input type="checkbox" id="remember-me" name="remember-me">
+
+		<input type="submit" value="Submit">
+		
+	</form>
+
+
+	<script>
+	   
+	   	function validateForm() {
+	   	
+			var name = document.forms[0]["name"].value;
+			var email = document.forms[0]["email"].value;
+			var password = document.forms[0]["password"].value;
+			var age = document.forms[0]["age"].value;
+			var phone = document.forms[0]["phone"].value;
+	   
+	  	var nameRegex = /^[a-zA-Z]+$/;
+			var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+			var ageRegex = /^[1-9][0-9]*$/;
+			var phoneRegex = /^\d{10}$/;
+
+			if (!nameRegex.test(name)) {
+				alert("Name must contain only letters and spaces");
+				return false;
+			}
+
+			if (!emailRegex.test(email)) {
+				alert("Please enter a valid email address");
+				return false;
+			}
+
+			if (!passwordRegex.test(password)) {
+				alert("Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number");
+				return false;
+			}
+
+			if (!ageRegex.test(age) || age < 18) {
+				alert("You must be 18 years or older to submit this form");
+				return false;
+			}
+
+			if (!phoneRegex.test(phone)) {
+				alert("Please enter a valid 10-digit phone number");
+				return false;
+			}
+
+			return true;
+		}
+	    
+
+		// Validate zip code format
+		var zipInput = document.getElementById("zip");
+		zipInput.addEventListener("input", function(event) {
+			if (zipInput.validity.patternMismatch) {
+				zipInput.setCustomValidity("Please enter a 5-digit zip code.");
+			} else {
+				zipInput.setCustomValidity("");
+			}
+		});
+	</script>
+</body>
+</html>
