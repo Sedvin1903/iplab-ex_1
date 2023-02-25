@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ETTA2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	    /* General styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+
+nav li {
+	margin-right: 1em;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1em;
+}
+
+section {
+	flex: 1;
+	margin: 1em;
+	background-color: #f2f2f2;
+	padding: 1em;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.box p {
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1em;
+	background-color: #333;
+	color: #fff;
+	margin: 0;
+	transform: rotate(0);
+	transition: transform 0.5s ease-in-out;
+}
+
+.transform-box:hover p {
+	transform: rotate(360deg);
+}
+
+.transition-button {
+	font-size: 1.2em;
+	padding: 1em;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.transition-button:hover {
+	background-color: #555;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.animation-box {
+	background-color: #333;
+	height: 100px;
+	width: 100px;
+	animation: myanimation 2s linear infinite;
+}
+
+@keyframes myanimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+}
+
+	    
+	    
+	</style>
+	
+	
+</head>
+<body>
+	<header>
+		<h1>Webpage 2 to showcase</h1>
+		<nav>
+		    <ul>
+		        <li>Element Transformations
+		        Transitions
+		        Animations</li>
+		        <li><a href="ass2.html"></a>Webpage 3</li>
+		    </ul>
+		</nav>
+	</header>
+	<main>
+		<section class="box">
+			<h2>Transformations</h2>
+			<div class="transform-box">
+				<p>Hover over me to see the transformation</p>
+			</div>
+		</section>
+		<section class="box">
+			<h2>Transitions</h2>
+			<button class="transition-button">Click me to see the transition</button>
+		</section>
+		<section class="box">
+			<h2>Animations</h2>
+			<center><div class="animation-box"></div></center>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 </p>
+	</footer>
+</body>
+</html>
