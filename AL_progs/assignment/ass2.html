@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ETTA3</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       /* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles for page elements */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.transform {
+  width: 200px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.transform:hover {
+  transform: rotate(90deg);
+}
+
+.transition {
+  width: 200px;
+  height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transition button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.transition button:hover {
+  background-color: #ccc;
+}
+
+.animation {
+  width: 300px;
+  height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+}
+}footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+}
+
+
+		a {
+  color: inherit;
+  text-decoration: none;
+}
+
+   </style>
+  </head>
+  <body>
+    <header>
+      <h1>Webpage 3</h1>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Element Transformations</h2>
+        <div class="transform">
+          <p>Text that will transform on hover <br> Will come origin by clicking below button</p>
+        </div>
+      </section>
+      <section>
+        <h2>Transitions</h2>
+        <div class="transition">   
+          <button>Click Me</button>
+        </div>
+      </section>
+      <section>
+        <h2>Animations</h2>
+        <div class="animation">
+          <p>Pulsating animation Text</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 </p>
+    </footer>
+  </body>
+</html>
