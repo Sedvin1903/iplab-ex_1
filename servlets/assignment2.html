@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Servlet 🖥️</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Welcome to Java Servlet Assignment Page 2 <hr>
+        </h1>
+    </div>
+    <div class="jsp">
+        <p style="font-size: medium;font-family: 'Courier New', Courier, monospace;"> Enter a 12 digit AU Student Register Numnber </p>
+       
+        <form action="yourrank" method="POST">
+            <label for="regno">REGISTER NO: </label>
+         <input type="text" name="regno" id="regno" required>
+    <button type="submit" onclick="R()"> SUBMIT</button>
+ </form>
+    </div>
+    <script>
+        function R() {
+          location.replace("http://localhost:8080/Myservlets/yourrank")
+        }
+        </script>
+
+
+</body>
+</html>
