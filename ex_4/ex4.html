@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL_3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container"  >
+        <form onsubmit=" return validateForm()">
+             <div class="row">
+                <label for="inputUsername3" class="col-label">UserName</label>
+                    <div class="col-sm-10">
+                        <input type="uname" class="form-control" id="inputUsername3" required>
+                    </div>
+                </div>
+                <div class="row">
+                <label for="inputEmail3" class="col-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" required>
+                </div>
+                </div>
+                <div class="row">
+                <label for="inputPassword3" class="col-label">AADHAR NO </label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputPassword3" required>
+                </div>
+                </div>
+                <fieldset class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" >
+                    <label class="form-check-label" for="gridRadios1">
+                        Male
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Female
+                    </label>
+                    </div>
+                    <div class="form-check Optional">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" aria-checked="">
+                    <label class="form-check-label" for="gridRadios3">
+                        Transgender
+                    </label>
+                    </div>
+                </div>
+                </fieldset>
+                        <div class="row">
+                            <label for="age" class="col-label">Age</label>
+                            <div class="col-sm-10">
+                            <input type="age" class="form-control" id="age" required>
+                        </div>
+                            </div>
+                 
+                        <div class="row">
+                        <label for="acctype" class="col-label">Account Type</label>
+                        
+                        <div class="col-sm-10">
+                        <select id="acctype" class="form-control" name="acctype" required>
+                            <option value="">--Select a type--</option>
+                            <option value="SA">Savings Account</option>
+                                <option value="CA">Current Account</option>
+                                <option value="JA">Joint Account</option>
+                        </select>
+                    </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="mob" class="col-label">Mobile Number </label>
+                            <div class="col-sm-10">
+                            <input type="tel" class="form-control" id="mob" required>
+                        </div>
+                            </div>
+                        
+                <div class="row">
+                <div class="col-sm-10 ">   
+                    <input class="fc-input" type="checkbox" id="gr" required>
+                    <label class="fc-label" for="gr">
+                        Above Informations are verified by me
+                    </label>  
+                </div>
+            </div>
+            <br/>
+                <input type="submit" class="btn btn-primary"id="demo" value="Sign up">  
+                Already a User ? 
+               <a href="login.html">Login</a>
+               
+       </form>
+                
+                
+                
+        </form>
+        <script>
+
+            /*function f(){
+
+                  if (name == "" && email == "" && aadhar == "" && age == "" && phone =="") {
+                    alert("Enter all Detaials !!");
+                  } 
+                  else if (!n.test(name) || !e.test(email) || !A.test(aadhar) ||!a.test(age) ||!m.test(phone)) {
+                    validateForm();
+                  } 
+            } */
+            function validateForm()
+                {
+                    var name = document.forms[0]["inputUsername3"].value;
+                    var email = document.forms[0]["inputEmail3"].value;
+                    var aadhar  = document.forms[0]["inputPassword3"].value;
+                    var age = document.forms[0]["age"].value;
+                    var phone = document.getElementById("mob").value;
+    
+                    const n = /\w{7,}/;
+                    const e =  /^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,}$/;
+                    const A = /^\d{12}$/;
+                    const a = /^\d{2,}$/;
+                    const m = /^\d{10}$/
+
+                        if (!n.test(name) || !e.test(email) || !A.test(aadhar) ||!a.test(age) ||!m.test(phone) ) 
+                        {  
+                          
+                          if (!n.test(name)) {
+                           alert("Please Enter a valid user name");
+                           return false;
+                          } else if (!e.test(email)) {
+                            alert("Please enter a valid email address");
+                            return false;
+                          } else if (!A.test(aadhar)) {
+                            alert("Enter the 12 digit AADHAR Number");
+                            return false;
+                          } else if (!a.test(age)) {
+                            alert("Age must be filled out");
+                            return false;
+                          }
+                        else if (!m.test(phone)) {
+                            alert("Please enter a valid 10 digit number");
+                            return false;
+                          } 
+                        }
+                        else
+                        {
+                            alert("Now Login !!!");
+                            return true;
+                        }
+                }
+        </script>
+    </div>
+    
+</body>
+</html>

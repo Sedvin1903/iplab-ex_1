@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL_3</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+    .container {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      .left-panel {
+       
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .right-panel {
+        
+        display: flex;
+        padding-left: 20px;
+      }
+      
+   </style>
+</head>
+<body>
+    <h2>ACCOUNT CREATED </h2>
+
+    <div class="container">
+           <div class="left-panel">
+            ACCOUNT NO. :
+           </div>
+           <div class="right-panel">
+             <div id="demo"></div>
+           </div>
+         </div>
+   
+   
+   
+   
+   <script>
+   var f = Math.floor(Math.random() * 10000000 );
+   document.getElementById("demo").innerHTML = (12156*10000000)+f;
+   </script>
+</body>
+</html>

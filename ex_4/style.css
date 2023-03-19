@@ -1,0 +1,19 @@
+div.container {
+    width: 750px;
+  
+    border: 100px;
+    border-color: rosybrown;
+    border-style: double;
+    padding: 200px;
+    border-width: 5px;
+    padding-top: 50px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+    padding-left: 75px;
+    border-radius: 100px;
+    margin: 100px;
+    margin-left: 310px;
+  }
+
+  
+ 
