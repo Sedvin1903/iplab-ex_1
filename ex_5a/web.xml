@@ -1,0 +1,34 @@
+<web-app>
+
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>p1</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/Hello</url-pattern>
+ </servlet-mapping>
+
+  <servlet>
+    <servlet-name>arr</servlet-name>
+    <servlet-class>ass1</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+    <servlet-name>arr</servlet-name>
+    <url-pattern>/selectedvalue</url-pattern>
+ </servlet-mapping>
+
+   <servlet>
+    <servlet-name>regNo</servlet-name>
+    <servlet-class>ass2</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+    <servlet-name>regNo</servlet-name>
+    <url-pattern>/yourrank</url-pattern>
+ </servlet-mapping>
+
+
+</web-app>
