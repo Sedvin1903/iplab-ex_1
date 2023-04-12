@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+</head>
+<body>
+    <table id="TABLE" border="1" style="padding: 15px;">
+
+    </table><br>
+    <h3 id="TP"></h3><br>
+    <form>
+        <b>Alter ITEM Count</b><br>
+        <label for="id">Item ID: &emsp;&emsp;&emsp;&nbsp; </label>
+        <input type="text" name="id" id="ID" required><br>
+        <label for="count">New Item Count:</label>
+        <input type="text" name="count" id="COUNT" required><br>
+        <input type="submit" onclick="change()">
+    </form><br>
+    <button onclick="checkout()">CHECKOUT</button>
+  <script>
+    // Retrieve the session storage data
+        var sessionData = window.sessionStorage;
+        var cartItems = Object.keys(sessionData);
+
+        // Get a reference to the table element
+        var table = document.getElementById("TABLE");
+
+        // Create the table header
+        var headerRow = table.insertRow();
+        var idHeader = headerRow.insertCell(0);
+        idHeader.innerHTML = "ID";
+        var priceHeader = headerRow.insertCell(1);
+        priceHeader.innerHTML = "Price";
+        var countHeader = headerRow.insertCell(2);
+        countHeader.innerHTML = "Count";
+
+        var ttlPrice = 0;
+
+        // Add the cart items to the table
+        for (var i = 0; i < cartItems.length; i++) {
+        var item = JSON.parse(sessionData.getItem(cartItems[i]));
+        var row = table.insertRow();
+        var idCell = row.insertCell(0);
+        idCell.innerHTML = cartItems[i];
+        var priceCell = row.insertCell(1);
+        priceCell.innerHTML = item.price;
+        var countCell = row.insertCell(2);
+        countCell.innerHTML = item.count;
+        ttlPrice += Number(item.price) * Number(item.count);
+    }
+
+        document.getElementById("TP").innerHTML = `The Total Cart Amount = ${ttlPrice} $`;
+
+
+        function checkout(){
+            alert("Thank you for shopping! Do come back again!");
+            sessionStorage.clear();
+            window.location.href="bill.jsp";
+        }
+
+        function change(){
+
+            flag = 0;
+            var id = document.getElementById('ID').value;
+            var count = document.getElementById('COUNT').value;
+            if(isNaN(count) || count < 0)
+            {
+                alert("Invalid Count Value");
+                return;
+            }
+            for (var i = 0; i < cartItems.length; i++) {
+                var Item = JSON.parse(sessionData.getItem(cartItems[i]));
+                if(cartItems[i] == id)
+                {
+                    var arr = { price: Item.price, count: count };
+                    window.sessionStorage.setItem(id, JSON.stringify(arr));
+                    flag = 1;
+                    alert("Change Made");
+                    location.reload();
+                }
+                if(flag == 0)
+                {
+                    alert("Check your inputs");
+                }
+                
+            }
+        }
+        
+</script>
+</body>
+</html>
