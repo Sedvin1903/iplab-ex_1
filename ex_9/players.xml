@@ -1,0 +1,37 @@
+<players>
+  <player>
+    <name>Virat Kohli</name>
+    <country>India</country>
+    <role>Batsman</role>
+  </player>
+  <player>
+    <name>Steve Smith</name>
+    <country>Australia</country>
+    <role>Batsman</role>
+  </player>
+  <player>
+    <name>Kane Williamson</name>
+    <country>New Zealand</country>
+    <role>Batsman</role>
+  </player>
+  <player>
+    <name>Babar Azam</name>
+    <country>Pakistan</country>
+    <role>Batsman</role>
+  </player>
+  <player>
+    <name>Jasprit Bumrah</name>
+    <country>India</country>
+    <role>Bowler</role>
+  </player>
+  <player>
+    <name>Rashid Khan</name>
+    <country>Afghanistan</country>
+    <role>Bowler</role>
+  </player>
+  <player>
+    <name>Ben Stokes</name>
+    <country>England</country>
+    <role>All-rounder</role>
+  </player>
+</players>
